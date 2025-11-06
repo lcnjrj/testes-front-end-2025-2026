@@ -3,3 +3,10 @@ Estudo e exercícios durante o curso Programa Santander Imersão Digital Alura E
 #AdaTechGirls
 
  
+HTML
+CSS
+JS
+GIT 
+GITHUB
+REACT
+DART
