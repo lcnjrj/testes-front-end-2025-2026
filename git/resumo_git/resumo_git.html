@@ -273,9 +273,34 @@ error: failed to push some refs to 'github.com:xxx/xxx.git'
 <span style="color: #e8f806;">Explicação</span> <span style="color: #6272a4;">The message error: src refspec main does not match any Essa mensagem significa que a branch main não existe localmente ou tem outro nome.</span>
 <span style="color: #4ec9b0;">$</span> git branch
 <span style="color: #04f724;"></span> * master
-<span style="color: #e8f806;">Explicação</span>Renomear a branch para main
+<span style="color: #e8f806;">Explicação</span> Renomear a branch para main
 <span style="color: #4ec9b0;">$</span> git branch -M main
 </pre>
+
+ <pre style="background: #1e1e1e; color: #d4d4d4; padding: 12px; border-radius: 6px; font-family: 'Courier New', monospace; font-size: 12px; margin: 8px 0; overflow-x: auto;"><span style="color: #4ec9b0;">$</span>  git push origin main
+To github.com:xxx/xxxxx.git
+
+ ! [rejected]        main -> main (fetch first)
+
+error: failed to push some refs to 'github.com:xxx/xxxxx.git
+<span style="color: #e8f806;">Explicação</span> <span style="color: #6272a4;">! [rejected] main -> main (fetch first) significa que a versão local está atradasa em relação a versão que está no git. <br>Baixar a versão que está no git e merge ou fazer alguma outra alteração.</span>
+<span style="color: #4ec9b0;">$</span>git pull origin main
+<span style="color: #04f724;"></span> git config pull.rebase false
+<span style="color: #4ec9b0;">$</span>  git push
+<span style="color: #e8f806;">Explicação</span> O git abrirá um editor para manualmente resolver o conflito
+<span style="color: #4ec9b0;">$</span>  git config pull.rebase false
+<span style="color: #4ec9b0;">$</span>   git pull origin main
+Enumerating objects: 21, done.
+Counting objects: 100% (16/16), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (9/9), 1.32 KiB | 674.00 KiB/s, done.
+Total 9 (delta 5), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (5/5), completed with 4 local objects.
+To github.com:xxx/xxxxxguit .git
+   e8f777f..5dedd65  main -> main
+</pre>
+
 
             <div style="background: #f8d7da; border-left: 4px solid #dc3545; padding: 10px; margin: 8px 0; font-size: 12px; border-radius: 4px;">
                 <strong>⚡ Lembre-se:</strong> Sempre faça <strong>pull</strong> antes de <strong>push</strong> para evitar conflitos!
