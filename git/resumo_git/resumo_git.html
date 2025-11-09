@@ -236,12 +236,46 @@
             <h3 style="font-size: 16px; font-weight: bold; color: #667eea; margin: 0 0 12px 0;">
                 <span style="font-size: 18px;">🎯</span> 10. Fluxo de Trabalho Típico
             </h3>
+            <pre style="background: #1e1e1e; color: #d4d4d4; padding: 12px; border-radius: 6px; font-family: 'Courier New', monospace; font-size: 12px; margin: 8px 0; overflow-x: auto;"><span style="color: #4ec9b0;">$</span> git init
+<span style="color: #4ec9b0;">$</span> <span style="color: #4ec9b0;">git status</span>
+<span style="color: #4ec9b0;">$</span> git add .
+<span style="color: #4ec9b0;">$</span> git commit -m "mensagem"
+<span style="color: #4ec9b0;">$</span> git remote add origin git@github.com:xxx/xxx.git
+<span style="color: #4ec9b0;">$</span> git remote -v
+<span style="color: #4ec9b0;">$</span> eval "$(ssh-agent -s)"
+<span style="color: #4ec9b0;">$</span> ssh-add ~/.ssh/xxx
+<span style="color: #4ec9b0;">$</span> cat ~/.ssh/xxx
+<span style="color: #4ec9b0;">$</span> ssh -T git@github.com
+<span style="color: #03fc0f;">Hi xxx! You've successfully authenticated, but GitHub does not provide shell access.</span> 
+
+<span style="color: #4ec9b0;">$</span> git push</pre>
             <pre style="background: #1e1e1e; color: #d4d4d4; padding: 12px; border-radius: 6px; font-family: 'Courier New', monospace; font-size: 12px; margin: 8px 0; overflow-x: auto;"><span style="color: #4ec9b0;">$</span> git pull
 <span style="color: #4ec9b0;">$</span> <span style="color: #6272a4;"># ... fazer alterações ...</span>
 <span style="color: #4ec9b0;">$</span> git status
 <span style="color: #4ec9b0;">$</span> git add .
 <span style="color: #4ec9b0;">$</span> git commit -m "mensagem"
 <span style="color: #4ec9b0;">$</span> git push</pre>
+
+            <div style="background: #f8d7da; border-left: 4px solid #dc3545; padding: 10px; margin: 8px 0; font-size: 12px; border-radius: 4px;">
+                <strong>⚡ Lembre-se:</strong> Sempre faça <strong>pull</strong> antes de <strong>push</strong> para evitar conflitos!
+            </div>
+        </section>
+
+        <section style="padding: 20px;">
+            <h3 style="font-size: 16px; font-weight: bold; color: #667eea; margin: 0 0 12px 0;">
+                <span style="font-size: 18px;">🎯</span> 11. Erros Comuns:
+            </h3>
+            <pre style="background: #1e1e1e; color: #d4d4d4; padding: 12px; border-radius: 6px; font-family: 'Courier New', monospace; font-size: 12px; margin: 8px 0; overflow-x: auto;"><span style="color: #4ec9b0;">$</span>  git push -u origin main
+
+error: src refspec main does not match any
+
+error: failed to push some refs to 'github.com:xxx/xxx.git'
+<span style="color: #e8f806;">Explicação</span> <span style="color: #6272a4;">The message error: src refspec main does not match any Essa mensagem significa que a branch main não existe localmente ou tem outro nome.</span>
+<span style="color: #4ec9b0;">$</span> git branch
+<span style="color: #04f724;"></span> * master
+<span style="color: #e8f806;">Explicação</span>Renomear a branch para main
+<span style="color: #4ec9b0;">$</span> git branch -M main
+</pre>
 
             <div style="background: #f8d7da; border-left: 4px solid #dc3545; padding: 10px; margin: 8px 0; font-size: 12px; border-radius: 4px;">
                 <strong>⚡ Lembre-se:</strong> Sempre faça <strong>pull</strong> antes de <strong>push</strong> para evitar conflitos!
@@ -263,7 +297,7 @@
     Tempo de construção da página Resumo Git: 6 dias antes do primeiro commit</li>
 </ul></h4></tfoot>
 <div style="background: linear-gradient(135deg, #f64f59, #c471ed, #12c2e9); padding: 24px; text-align: center; color: white;">
-            <h2 style="font-size: 28px; margin: 0 0 8px 0; text-shadow: 2px 2px 4px rgba(0,0,0,0.2); font-weight: 700; color: white;"><a href="https://lcnjrj.github.io/testes-front-end-2025-2026/index.html">Voltar Para Página Índice</a></h2>
+            <h2 style="font-size: 28px; margin: 0 0 8px 0; text-shadow: 2px 2px 4px rgba(0,0,0,0.2); font-weight: 700; color: white;"><a href="https://lcnjrj.github.io/testes-front-end-2025-2026/">Voltar Para Página Índice</a></h2>
 </div>
 </body>
 </html>
